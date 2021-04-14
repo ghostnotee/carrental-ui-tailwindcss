@@ -1,4 +1,18 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 /* You can add global styles to this file, and also import other style files */
+
+@layer base {
+  .side-head {
+    @apply w-auto rounded-b shadow-lg divide-y divide-blueGray-400 text-lightBlue-800 text-opacity-70 text-center font-medium;
+  }
+
+  .side-divider {
+    @apply divide-y divide-blueGray-400;
+  }
+
+  .t-dimension {
+    @apply text-blueGray-700 hover:font-normal;
+  }
+}
