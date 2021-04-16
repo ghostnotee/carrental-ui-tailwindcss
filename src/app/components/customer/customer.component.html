@@ -56,33 +56,13 @@
 <table *ngIf="dataLoaded!=false" class="side-table">
   <thead>
     <tr>
-      <th>Marka</th>
-      <th>Model Adı</th>
-      <th>Model Yılı</th>
-      <th>Rengi</th>
-      <th>Günlük Ücret</th>
-      <th>Açıklama</th>
+      <th>Müşteriler</th>
     </tr>
   </thead>
-  <tbody class="side-divider">
-    <tr *ngFor="let car of carWithDetails">
-      <td>
-        <div class="t-dimension"> {{car.carBrandName}} </div>
-      </td>
-      <td>
-        <div class="t-dimension"> {{car.carModelName}} </div>
-      </td>
-      <td>
-        <div class="t-dimension"> {{car.modelYear | date:'yyyy'}}</div>
-      </td>
-      <td>
-        <div class="t-dimension"> {{car.carColourName}} </div>
-      </td>
-      <td>
-        <div class="t-dimension"> {{car.dailyPrice}} </div>
-      </td>
-      <td>
-        <div class="t-dimension"> {{car.description}} </div>
+  <tbody>
+    <tr>
+      <td class="side-divider">
+        <div *ngFor="let customer of customers" class="t-dimension"> {{customer.companyName}} </div>
       </td>
     </tr>
   </tbody>

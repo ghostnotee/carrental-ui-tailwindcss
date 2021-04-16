@@ -57,32 +57,28 @@
   <thead>
     <tr>
       <th>Marka</th>
-      <th>Model Adı</th>
-      <th>Model Yılı</th>
-      <th>Rengi</th>
-      <th>Günlük Ücret</th>
-      <th>Açıklama</th>
+      <th>Firma Adı</th>
+      <th>Müşteri Adı</th>
+      <th>Kiralanan Tarih</th>
+      <th>Kiradan Dönüş Tarihi</th>
     </tr>
   </thead>
   <tbody class="side-divider">
-    <tr *ngFor="let car of carWithDetails">
+    <tr *ngFor="let rental of rentals">
       <td>
-        <div class="t-dimension"> {{car.carBrandName}} </div>
+        <div class="t-dimension"> {{rental.carModelBrandName}} </div>
       </td>
       <td>
-        <div class="t-dimension"> {{car.carModelName}} </div>
+        <div class="t-dimension"> {{rental.customerName}} </div>
       </td>
       <td>
-        <div class="t-dimension"> {{car.modelYear | date:'yyyy'}}</div>
+        <div class="t-dimension"> {{rental.customerFullName}} </div>
       </td>
       <td>
-        <div class="t-dimension"> {{car.carColourName}} </div>
+        <div class="t-dimension"> {{rental.rentDate}} </div>
       </td>
       <td>
-        <div class="t-dimension"> {{car.dailyPrice}} </div>
-      </td>
-      <td>
-        <div class="t-dimension"> {{car.description}} </div>
+        <div class="t-dimension"> {{rental.returnDate}} </div>
       </td>
     </tr>
   </tbody>

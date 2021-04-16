@@ -4,15 +4,16 @@
 /* You can add global styles to this file, and also import other style files */
 
 @layer base {
-  .side-head {
-    @apply w-auto rounded-b shadow-lg divide-y divide-blueGray-400 text-lightBlue-800 text-opacity-70 text-center font-medium;
+  .side-table {
+    @apply table-auto w-full py-1.5 rounded-b shadow-lg divide-y divide-blueGray-500 divide-opacity-70 from-blueGray-50 to-blueGray-900
+     text-lightBlue-800 text-center;
   }
 
   .side-divider {
-    @apply divide-y divide-blueGray-400;
+    @apply divide-y divide-blueGray-300;
   }
 
   .t-dimension {
-    @apply text-blueGray-700 hover:font-normal;
+    @apply cursor-pointer text-blueGray-700 hover:text-opacity-75 py-1.5;
   }
 }

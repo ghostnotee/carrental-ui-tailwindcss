@@ -1,5 +1,6 @@
 const { guessProductionMode } = require("@ngneat/tailwind");
 const colors = require("tailwindcss/colors");
+const { gradientColorStops } = require("tailwindcss/defaultTheme");
 
 process.env.TAILWIND_MODE = guessProductionMode() ? "build" : "watch";
 
@@ -13,8 +14,8 @@ module.exports = {
   theme: {
     colors: {
       // Build your palette here
-      // transparent: "transparent",
-      // current: "currentColor",
+      transparent: "transparent",
+      current: "currentColor",
       white: colors.white,
       blueGray: colors.blueGray,
       green: colors.green,
