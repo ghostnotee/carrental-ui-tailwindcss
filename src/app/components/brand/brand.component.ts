@@ -31,7 +31,7 @@ export class BrandComponent implements OnInit {
 
   getCurrentBrandClass(brand: Brand) {
     if (brand == this.currentBrand) {
-      return 't-dimension bg-gradient-to-r from-teal-400 via-white to-white';
+      return 't-dimension bg-gradient-to-r from-teal-200 via-teal-100 to-white';
     } else {
       return 't-dimension';
     }

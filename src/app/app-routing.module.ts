@@ -6,6 +6,7 @@ import { CustomerComponent } from './components/customer/customer.component';
 const routes: Routes = [
   { path: '', component: CarComponent },
   { path: 'customers', component: CustomerComponent },
+  { path: 'cars/brand/:brandId', component: CarComponent },
 ];
 
 @NgModule({

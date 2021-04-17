@@ -62,7 +62,8 @@
   <tbody>
     <tr>
       <td class="side-divider">
-        <div (click)="setCurrentBrand(brand)" *ngFor="let brand of brands" [class]="getCurrentBrandClass(brand)">
+        <div routerLink="/cars/brand/{{brand.brandId}}" (click)="setCurrentBrand(brand)" *ngFor="let brand of brands"
+          [class]="getCurrentBrandClass(brand)">
           {{brand.brandName}}
         </div>
       </td>
