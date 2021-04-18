@@ -4,5 +4,5 @@
 }
 
 .prm-nav-item {
-  @apply py-5 px-3 text-blueGray-700 hover:text-blueGray-900;
+  @apply py-5 px-3 text-blueGray-600 hover:text-gray-900 hover:opacity-100;
 }

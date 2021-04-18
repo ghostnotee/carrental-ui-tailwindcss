@@ -59,13 +59,16 @@
       <th>Markalar</th>
     </tr>
   </thead>
-  <tbody>
+  <tbody class="side-divider">
     <tr>
-      <td class="side-divider">
-        <div routerLink="/cars/brand/{{brand.brandId}}" (click)="setCurrentBrand(brand)" *ngFor="let brand of brands"
-          [class]="getCurrentBrandClass(brand)">
-          {{brand.brandName}}
-        </div>
+      <td (click)="deleteCurrentBrand()" [class]="getAllBrandsClass()" routerLink="">
+        Tüm Araçlar
+      </td>
+    </tr>
+    <tr *ngFor="let brand of brands">
+      <td routerLink="/cars/brand/{{brand.brandId}}" (click)="setCurrentBrand(brand)"
+        [class]="getCurrentBrandClass(brand)">
+        {{brand.brandName}}
       </td>
     </tr>
   </tbody>
