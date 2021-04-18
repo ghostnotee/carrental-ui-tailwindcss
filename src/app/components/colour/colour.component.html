@@ -59,10 +59,17 @@
       <th>Renk Seçenekleri</th>
     </tr>
   </thead>
-  <tbody>
+  <tbody class="side-divider">
+  <tbody class="side-divider">
     <tr>
-      <td class="side-divider">
-        <div *ngFor="let colour of colours" class="t-dimension"> {{colour.colourName}} </div>
+      <td (click)="deleteCurrentColour()" [class]="getAllColoursClass()" routerLink="">
+        Tüm Renkler
+      </td>
+    </tr>
+    <tr *ngFor="let colour of colours">
+      <td routerLink="/cars/colour/{{colour.colourId}}" (click)="setCurrentColour(colour)"
+        [class]="getCurrentColourClass(colour)">
+        {{colour.colourName}}
       </td>
     </tr>
   </tbody>

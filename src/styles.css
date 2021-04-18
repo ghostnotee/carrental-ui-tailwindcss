@@ -5,7 +5,7 @@
 
 @layer base {
   .side-table {
-    @apply table-auto w-full rounded-b shadow-lg divide-y divide-teal-500 divide-opacity-70
+    @apply table-auto w-full rounded-b shadow-lg divide-y divide-lightBlue-800 divide-opacity-50
      text-lightBlue-800 text-center;
   }
 
@@ -14,7 +14,7 @@
   }
 
   .t-dimension {
-    @apply cursor-pointer text-blueGray-700 hover:text-opacity-75 text-center py-1.5;
+    @apply cursor-pointer text-blueGray-700 hover:text-opacity-75 text-center py-1;
   }
 
   .table-wrap {

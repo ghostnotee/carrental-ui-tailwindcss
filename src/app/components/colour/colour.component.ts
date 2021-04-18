@@ -10,6 +10,7 @@ import { ColourService } from 'src/app/services/colour.service';
 export class ColourComponent implements OnInit {
   dataLoaded = false;
   colours: Colour[] = [];
+  currentColour: Colour | null;
 
   constructor(private colourService: ColourService) {}
 
@@ -22,5 +23,29 @@ export class ColourComponent implements OnInit {
       this.colours = response.data;
       this.dataLoaded = true;
     });
+  }
+
+  setCurrentColour(colour: Colour) {
+    this.currentColour = colour;
+  }
+
+  deleteCurrentColour() {
+    this.currentColour = null;
+  }
+
+  getCurrentColourClass(colour: Colour) {
+    if (this.currentColour == colour) {
+      return 't-dimension bg-gradient-to-r from-teal-100 via-teal-50 to-white';
+    } else {
+      return 't-dimension';
+    }
+  }
+
+  getAllColoursClass() {
+    if (!this.currentColour) {
+      return 't-dimension bg-gradient-to-r from-teal-100 via-teal-50 to-white';
+    } else {
+      return 't-dimension';
+    }
   }
 }
