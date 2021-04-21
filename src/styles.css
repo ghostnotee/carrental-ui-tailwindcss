@@ -3,17 +3,45 @@
 @import "tailwindcss/utilities";
 /* You can add global styles to this file, and also import other style files */
 
-@layer base {
+@layer components {
   .side-table {
-    @apply table-auto w-full py-1.5 rounded-b shadow-lg divide-y divide-blueGray-500 divide-opacity-70 from-blueGray-50 to-blueGray-900
+    @apply table-auto w-full rounded-b shadow-lg divide-y  divide-opacity-50
      text-lightBlue-800 text-center;
   }
 
   .side-divider {
-    @apply divide-y divide-blueGray-300;
+    @apply divide-y;
   }
 
   .t-dimension {
-    @apply cursor-pointer text-blueGray-700 hover:text-opacity-75 py-1.5;
+    @apply cursor-pointer text-blueGray-700 hover:text-opacity-75 text-center py-1;
+  }
+
+  .table-wrap {
+    @apply -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8;
+  }
+
+  .table-box {
+    @apply py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8;
+  }
+
+  .table-frame {
+    @apply shadow overflow-hidden border-b border-gray-200 sm:rounded-lg;
+  }
+
+  .table-style {
+    @apply min-w-full divide-y divide-gray-200;
+  }
+
+  .table-head {
+    @apply px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider;
+  }
+
+  .table-body {
+    @apply bg-white divide-y divide-gray-200;
+  }
+
+  .table-dimension {
+    @apply px-6 py-3 whitespace-nowrap;
   }
 }

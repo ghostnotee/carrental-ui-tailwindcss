@@ -1,0 +1,80 @@
+<div class="w-2/5 mb-6 ml-4">
+  <div class="h-75 w-100 rounded-lg shadow-xl overflow-hidden items-center">
+    <swiper [config]="config">
+      <div class="swiper-wrapper">
+        <div *ngFor="let photo of images" class="swiper-slide">
+          <img class="rounded-lg opacity-90" src="https://localhost:5001/{{photo.imagePath}}" alt="{{photo.carImageId}}">
+        </div>
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+      <!-- Add Arrows -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </swiper>
+
+  </div>
+</div>
+
+
+
+<div class="space-x-2 sm:flex-row">
+  <div class="w-4/5">
+    <div class="flex flex-col">
+      <div class="table-wrap">
+        <div class="table-box">
+          <div class="table-frame">
+            <table class="table-style">
+              <thead class="bg-gray-50">
+                <tr>
+                  <th scope="col" class="table-head">
+                    Araç
+                  </th>
+                  <th scope="col" class="table-head">
+                    Renk - Model
+                  </th>
+                  <th scope="col" class="table-head">
+                    Günlük Kira
+                  </th>
+                  <th scope="col" class="table-head">
+                    Açıklama
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="table-body">
+                <tr>
+                  <td class="table-dimension">
+                    <div class="flex items-center">
+                      <div class="ml-4">
+                        <div class="text-sm font-medium text-gray-900">
+                          {{car.carBrandName}}
+                        </div>
+                        <div class="text-sm text-gray-500">
+                          {{car.carModelName}}
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="table-dimension">
+                    <div class="text-sm text-gray-900">{{car.carColourName}}</div>
+                    <div class="text-sm text-gray-500">{{car.modelYear | date:'yyyy'}}</div>
+                  </td>
+                  <td class="table-dimension">
+                    <span class="text-sm text-gray-900">
+                      {{car.dailyPrice}} ₺
+                    </span>
+                  </td>
+                  <td class="table-dimension text-sm text-gray-500">
+                    {{car.description}}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
