@@ -1,24 +1,22 @@
-<div class="w-2/5 mb-6 ml-4">
-  <div class="h-75 w-100 rounded-lg shadow-xl overflow-hidden items-center">
-    <swiper [config]="config">
-      <div class="swiper-wrapper">
-        <div *ngFor="let photo of images" class="swiper-slide">
-          <img class="rounded-lg opacity-90" src="https://localhost:5001/{{photo.imagePath}}" alt="{{photo.carImageId}}">
-        </div>
-      </div>
-      <!-- Add Pagination -->
-      <div class="swiper-pagination"></div>
-      <!-- Add Arrows -->
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-    </swiper>
-
-  </div>
-</div>
-
-
-
 <div class="space-x-2 sm:flex-row">
+  <div class="w-2/5 mb-6 ml-4">
+    <div class="h-75 w-100 rounded-lg shadow-md overflow-hidden items-center">
+      <swiper [config]="config">
+        <div class="swiper-wrapper">
+          <div *ngFor="let photo of images" class="swiper-slide">
+            <img class="rounded-lg opacity-90" src="https://localhost:5001/{{photo.imagePath}}"
+              alt="{{photo.carImageId}}">
+          </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination">asd</div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next swiper-button-white"></div>
+        <div class="swiper-button-prev swiper-button-white"></div>
+      </swiper>
+    </div>
+  </div>
+
   <div class="w-4/5">
     <div class="flex flex-col">
       <div class="table-wrap">

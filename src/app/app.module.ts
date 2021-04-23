@@ -2,6 +2,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,8 @@ import { CustomerComponent } from './components/customer/customer.component';
 import { RentalComponent } from './components/rental/rental.component';
 import { CarDetailComponent } from './components/car-detail/car-detail.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { VatAddedPipe } from './pipes/vat-added.pipe';
+import { FilterTextPipe } from './pipes/filter-text.pipe';
 
 @NgModule({
   declarations: [
@@ -24,6 +27,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CustomerComponent,
     RentalComponent,
     CarDetailComponent,
+    VatAddedPipe,
+    FilterTextPipe,
   ],
   imports: [
     BrowserModule,
@@ -31,6 +36,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     BrowserAnimationsModule,
     NgxUsefulSwiperModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

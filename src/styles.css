@@ -34,7 +34,7 @@
   }
 
   .table-head {
-    @apply px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider;
+    @apply px-6 py-3 text-left text-xs font-medium text-gray-500 tracking-wider;
   }
 
   .table-body {
@@ -44,4 +44,17 @@
   .table-dimension {
     @apply px-6 py-3 whitespace-nowrap;
   }
+}
+
+.swiper-pagination-bullet {
+  opacity: 0.5;
+  background-color: #ffffff;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+span.swiper-pagination-bullet {
+  background-color: black;
 }

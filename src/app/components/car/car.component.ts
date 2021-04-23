@@ -11,6 +11,7 @@ import { CarService } from 'src/app/services/car.service';
 export class CarComponent implements OnInit {
   dataLoaded = false;
   carWithDetails: CarDetail[];
+  filterText = '';
 
   constructor(
     private carService: CarService,
