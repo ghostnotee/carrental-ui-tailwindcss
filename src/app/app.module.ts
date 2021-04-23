@@ -12,7 +12,7 @@ import { ColourComponent } from './components/colour/colour.component';
 import { NaviComponent } from './components/navi/navi.component';
 import { CustomerComponent } from './components/customer/customer.component';
 import { RentalComponent } from './components/rental/rental.component';
-import { CarDetailComponent } from './components/car-detail/car-detail.component';
+import { CarDetailComponent } from './components/car/car-detail/car-detail.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { VatAddedPipe } from './pipes/vat-added.pipe';
 import { FilterTextPipe } from './pipes/filter-text.pipe';
