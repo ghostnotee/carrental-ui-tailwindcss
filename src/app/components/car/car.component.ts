@@ -17,9 +17,9 @@ export class CarComponent implements OnInit {
   carWithDetails: CarDetail[];
   filterText = '';
   brands: Brand[];
-  brandId: number
+  brandId: number;
   colours: Colour[];
-  colourId: number
+  colourId: number;
 
   constructor(
     private carService: CarService,
