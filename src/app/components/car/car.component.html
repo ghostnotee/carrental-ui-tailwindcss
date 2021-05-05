@@ -69,7 +69,7 @@
       </div>
       <div class="col-span-6 w-1/3 sm:col-span-3">
         <label for="brand-select" class="label">Renkler</label>
-        <select [(ngModel)]="colourId" id="colour-select" name="colour-select" class="select-option">
+        <select [(ngModel)]="colourId" id="colour-select" name="colour-select" class="form-select select-option">
           <option value="0" selected>Renk Seçiniz</option>
           <option *ngFor="let colour of colours" [value]="colour.colourId"> {{colour.colourName}} </option>
         </select>
@@ -84,7 +84,7 @@
     <div class="table-box">
       <div class="table-frame">
         <table class="table-style">
-          <thead class="bg-gray-50">
+          <thead class="bg-gray-100">
             <tr>
               <th scope="col" class="table-head">
                 Araç

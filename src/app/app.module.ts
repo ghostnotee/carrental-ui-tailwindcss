@@ -1,8 +1,12 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
 import { FormsModule } from '@angular/forms';
+import {
+  SwiperModule,
+  SwiperConfigInterface,
+  SWIPER_CONFIG,
+} from 'ngx-swiper-wrapper';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +20,16 @@ import { CarDetailComponent } from './components/car/car-detail/car-detail.compo
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { VatAddedPipe } from './pipes/vat-added.pipe';
 import { FilterTextPipe } from './pipes/filter-text.pipe';
+
+// SwiperOptions from 'swiper' could also be used here instead of SwiperConfigInterface
+const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
+  observer: true,
+  direction: 'horizontal',
+  threshold: 50,
+  spaceBetween: 5,
+  slidesPerView: 1,
+  centeredSlides: true,
+};
 
 @NgModule({
   declarations: [
@@ -35,10 +49,15 @@ import { FilterTextPipe } from './pipes/filter-text.pipe';
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    NgxUsefulSwiperModule,
+    SwiperModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: SWIPER_CONFIG,
+      useValue: DEFAULT_SWIPER_CONFIG,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

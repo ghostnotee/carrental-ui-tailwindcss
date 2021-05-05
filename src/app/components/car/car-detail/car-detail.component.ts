@@ -4,7 +4,10 @@ import { CarDetail } from 'src/app/models/car-detail';
 import { Image } from 'src/app/models/image';
 import { CarService } from 'src/app/services/car.service';
 import { ImageService } from 'src/app/services/image.service';
+import { SwiperComponent, SwiperDirective } from 'ngx-swiper-wrapper';
 import { SwiperOptions } from 'swiper';
+import { PaginationOptions } from 'swiper/types/components/pagination';
+import { ScrollbarOptions } from 'swiper/types/components/scrollbar';
 
 @Component({
   selector: 'app-car-detail',
@@ -12,17 +15,22 @@ import { SwiperOptions } from 'swiper';
   styleUrls: ['./car-detail.component.css'],
 })
 export class CarDetailComponent implements OnInit {
-  config: SwiperOptions = {
-    pagination: { el: '.swiper-pagination', clickable: true },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    spaceBetween: 30,
-  };
-
   car: CarDetail;
   images: Image[];
+
+  config: SwiperOptions = {
+    a11y: { enabled: true },
+    loop: true,
+    direction: 'horizontal',
+    slidesPerView: 1,
+    keyboard: true,
+    mousewheel: true,
+    navigation: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  };
 
   constructor(
     private carService: CarService,
