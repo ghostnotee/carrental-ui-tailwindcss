@@ -54,7 +54,7 @@
 
 div.swiper-button-prev,
 div.swiper-button-next {
-  @apply text-black text-9xl text-opacity-70 font-black;
+  @apply w-12 h-14 text-blueGray-50 bg-blueGray-400 rounded-full bg-opacity-40 align-middle font-bold;
 }
 
 span.swiper-pagination-bullet {

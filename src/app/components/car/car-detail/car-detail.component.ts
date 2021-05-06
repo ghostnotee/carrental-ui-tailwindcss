@@ -4,10 +4,7 @@ import { CarDetail } from 'src/app/models/car-detail';
 import { Image } from 'src/app/models/image';
 import { CarService } from 'src/app/services/car.service';
 import { ImageService } from 'src/app/services/image.service';
-import { SwiperComponent, SwiperDirective } from 'ngx-swiper-wrapper';
 import { SwiperOptions } from 'swiper';
-import { PaginationOptions } from 'swiper/types/components/pagination';
-import { ScrollbarOptions } from 'swiper/types/components/scrollbar';
 
 @Component({
   selector: 'app-car-detail',
